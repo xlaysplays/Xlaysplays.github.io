@@ -1,9 +1,9 @@
-Setup Instructions:.
-Create a Part in ReplicatedStorage named Glove (this is your glove model).
+--Setup Instructions:.
+--Create a Part in ReplicatedStorage named Glove (this is your glove model).
 
-Put this script inside a Tool named Glove (or create the tool and parent the glove part inside it).
+--Put this script inside a Tool named Glove (or create the tool and parent the glove part inside it).
 
-Put the Tool in StarterPack so players get it when they join.
+--Put the Tool in StarterPack so players get it when they join.
 
 local tool = script.Parent
 local player = game.Players.LocalPlayer
