@@ -1,4 +1,4 @@
-Setup Instructions:
+Setup Instructions:.
 Create a Part in ReplicatedStorage named Glove (this is your glove model).
 
 Put this script inside a Tool named Glove (or create the tool and parent the glove part inside it).
