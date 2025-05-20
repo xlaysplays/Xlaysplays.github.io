@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xlays's EXE Hub</title>
+  <style>
+    body {
+      background: black;
+      color: red;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 100px;
+      font-size: 3em;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px red; }
+      25% { text-shadow: -2px -2px cyan; }
+      50% { text-shadow: 2px -2px lime; }
+      75% { text-shadow: -2px 2px magenta; }
+      100% { text-shadow: 2px 2px red; }
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .script {
+      background: #111;
+      border: 1px solid red;
+      color: white;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .script pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .copy-btn {
+      background: red;
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .copy-btn:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>WELCOME TO XLAY'S SCRIPT HUB</h1>
+
+  <div class="container">
+    <div class="script">
+      <strong>Punch Script</strong>
+      <pre id="script1">script.Parent.Touched:Connect(function(hit)
+  local plr = game.Players:GetPlayerFromCharacter(hit.Parent)
+  if plr then
+    print("Punch hit:", plr.Name)
+  end
+end)</pre>
+      <button class="copy-btn" onclick="copyScript('script1')">Copy Script</button>
+    </div>
+
+    <div class="script">
+      <strong>Glove Equip Script</strong>
+      <pre id="script2">local glove = game.ReplicatedStorage.Gloves.Basic:Clone()
+glove.Parent = player.Backpack</pre>
+      <button class="copy-btn" onclick="copyScript('script2')">Copy Script</button>
+    </div>
+  </div>
+
+  <script>
+    function copyScript(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Script copied!');
+      });
+    }
+  </script>
+</body>
+  </html>
+
